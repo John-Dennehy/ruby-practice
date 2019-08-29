@@ -7,10 +7,9 @@ def fizzbuzz(number)
   return output # return output
 end
 
-# for testing
-while true
-  print "Enter a number (or 'stop'): "
-  input = gets.chomp # get number from user
-  break if input == "stop"
-  print " = #{fizzbuzz(input.to_i)}\n" # return output
+# for testing method
+print "Enter a number: "
+until_number = gets.chomp.to_i # get number from user
+(1..until_number).each do |number| # for each number in the range
+  puts fizzbuzz(number) # return the output
 end
