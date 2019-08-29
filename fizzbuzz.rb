@@ -1,4 +1,6 @@
 
 def fizzbuzz(number)
-  return "FizzBuzz"
+  output = ""
+  output += "Fizz" if number % 3 == 0
+  return output
 end
