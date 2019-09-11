@@ -16,9 +16,9 @@ def duration_array(seconds)
 
   array = []
   units_of_time.each do |unit|
-    if seconds >= duration
+    if seconds >= unit[:duration]
       unit[:total] = (seconds / unit[:duration])
-      seconds %= duration # update seconds to equal the remaining seconds   
+      seconds %= unit[:duration] # update seconds to equal the remaining seconds   
     end
     
     unit_name = unit[:name]
@@ -35,6 +35,6 @@ def duration_string(array)
     return array.first
   when array.length > 1
     last_join = " and " + array.pop
-    return array = array.join(", ") + last_join
+    return array.join(", ") + last_join
   end
 end
