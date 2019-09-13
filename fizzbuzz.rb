@@ -10,7 +10,7 @@ def fizzbuzz(count_to = 30)
     hash.each do |key, value| # check the number against each item in hash
       output += value if number % key == 0 # add value string to output if number is divisible by key
     end
-    
+
     output = number if output == "" # if output is still blank, make output the number
     puts output
   end
